@@ -361,55 +361,34 @@ function ProgramsSection() {
   );
 }
 
-// ============ PRICING SECTION ============
-function PricingSection() {
-  return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-ocean-900 via-ocean-800 to-cyan-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-ocean-400/20 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <Timer className="w-4 h-4" />
-          Flexible Scheduling
-        </div>
-
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Premium Instruction,
-          <span className="block text-cyan-300">Competitive Rates</span>
-        </h2>
-
-        <p className="text-lg md:text-xl text-ocean-100 leading-relaxed mb-8 max-w-2xl mx-auto">
-          As an independent instructor, I provide elite, personalized coaching without the corporate overhead fees
-          of commercial swim centers. Contact me directly for a customized quote tailored to your family's
-          specific goals and scheduling needs.
-        </p>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <div className="text-center">
-              <p className="text-cyan-200 text-sm mb-1">No Hidden Fees</p>
-              <p className="font-bold text-lg">Transparent Pricing</p>
-            </div>
-            <div className="w-px h-12 bg-white/20 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-cyan-200 text-sm mb-1">Flexible Packages</p>
-              <p className="font-bold text-lg">Custom Quotes</p>
-            </div>
-            <div className="w-px h-12 bg-white/20 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-cyan-200 text-sm mb-1">Direct Contact</p>
-              <p className="font-bold text-lg">Personal Service</p>
-            </div>
+{/* ============ STATIC TEST LAYOUT ============ */}
+<div className="w-full mb-12 py-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    {reviewsData.map((review) => (
+      <div 
+        key={review.id} 
+        className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-left border border-white/10 shadow-lg flex flex-col justify-between"
+      >
+        <div>
+          {/* 5-Star Row */}
+          <div className="flex gap-1 mb-3 text-amber-400">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-current" />
+            ))}
           </div>
+          <p className="text-sm md:text-base text-ocean-50 leading-relaxed mb-4 italic">
+            "{review.text}"
+          </p>
+        </div>
+        
+        <div className="mt-auto pt-2 border-t border-white/10">
+          <h4 className="font-bold text-cyan-200">{review.name}</h4>
+          <p className="text-xs text-ocean-200">{review.meta}</p>
         </div>
       </div>
-    </section>
-  );
-}
-
+    ))}
+  </div>
+</div>
 // ============ SUCCESS MODAL ============
 function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
