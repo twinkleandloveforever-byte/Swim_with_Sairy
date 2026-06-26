@@ -361,34 +361,6 @@ function ProgramsSection() {
   );
 }
 
-{/* ============ STATIC TEST LAYOUT ============ */}
-<div className="w-full mb-12 py-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-    {reviewsData.map((review) => (
-      <div 
-        key={review.id} 
-        className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-left border border-white/10 shadow-lg flex flex-col justify-between"
-      >
-        <div>
-          {/* 5-Star Row */}
-          <div className="flex gap-1 mb-3 text-amber-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-current" />
-            ))}
-          </div>
-          <p className="text-sm md:text-base text-ocean-50 leading-relaxed mb-4 italic">
-            "{review.text}"
-          </p>
-        </div>
-        
-        <div className="mt-auto pt-2 border-t border-white/10">
-          <h4 className="font-bold text-cyan-200">{review.name}</h4>
-          <p className="text-xs text-ocean-200">{review.meta}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 // ============ SUCCESS MODAL ============
 function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
@@ -730,7 +702,6 @@ function App() {
       <MobileAdvantage />
       <AboutSection />
       <ProgramsSection />
-      <PricingSection />
       <ContactSection />
       <Footer />
     </div>
