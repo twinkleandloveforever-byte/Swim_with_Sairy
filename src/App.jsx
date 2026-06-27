@@ -259,8 +259,7 @@ function AboutSection() {
 
             <div className="space-y-6 text-ocean-700 leading-relaxed">
               <p className="text-lg">
-                As a local independent instructor, the spark to my fire is the love of the game alone. I have been coaching swim independently 
-                for over 2 years now, and I couldn't have asked for a better community of students and families to share my passion with.
+              I started Swim with Sairy at 16 years old with a simple dream: to bring my favorite sport to my local community, helping people of all ages unlock a lifetime of fun and confidence in the water. For me, the water is a place of complete calm: that gentle, silky flow brushing over your skin as the world seems to fade away...
               </p>
 
               <p>
@@ -272,7 +271,7 @@ function AboutSection() {
               <p>
                 Over the years, the dampness and dedication have turned the swimming pool into my second home, and that is the 
                 exact journey I am so excited to take you on. I understand the challenges, the small breakthroughs, and the 
-                seemingly endless plateaus of progress. My goal is to bring you the dedication and devotion that once fueled my childhood years.
+                seemingly endless plateaus of progress. My goal is to bring you the exact same devotion that once fueled my childhood years.
               </p>
             </div>
 
