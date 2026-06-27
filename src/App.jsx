@@ -123,7 +123,7 @@ function HeroSection() {
             <img
               src="https://i.postimg.cc/hPd5xdq7/Copilot-20260627-004810.png"
               alt="Swim with Sairy"
-              className="max-h-[16vh] sm:max-h-[20vh] md:max-h-[24vh] lg:max-h-[26vh] w-auto object-contain"
+              className="max-h-[16vh] sm:max-h-[40vh] md:max-h-[48vh] lg:max-h-[52vh] w-auto object-contain"
             />
           </div>
 
