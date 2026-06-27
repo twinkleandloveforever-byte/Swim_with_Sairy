@@ -239,19 +239,20 @@ function AboutSection() {
 
             <div className="space-y-6 text-ocean-700 leading-relaxed">
               <p className="text-lg">
-                As a dedicated, local independent swim instructor, I provide consistent one-on-one attention that
-                you simply cannot find at massive commercial swim schools with rotating staff and crowded classes.
+                As a local independent instructor, the spark to my fire is the love of the game alone. I have been coaching swim independently 
+                for over 2 years now, and I couldn't have asked for a better community of students and families to share my passion with.
               </p>
 
               <p>
-                With a strong athletic background and years of experience in the water, I bring both technical
-                expertise, positive reinforcement, and proven techniques adapted to each individual's pace.
+                My name is Sairy, and I know better than anyone what it’s like to stand at the edge of the
+                pool deck, wondering if I’d ever truly feel at home with water. Growing up in cold swimsuits, wet 
+                towels, and a seemingly permanent tan taught me that the only to push myself to first place was one lap at a time.
               </p>
 
               <p>
-                Safety is my top priority. Every lesson begins with water safety fundamentals, ensuring students
-                build confidence and skills in a secure, supportive environment. Whether you're introducing your
-                child to the water or refining competitive strokes, I tailor each session to your specific needs.
+                Over the years, the dampness and dedication have turned the swimming pool into my second home, and that is the 
+                exact journey I am so excited to take you on. I understand the challenges, the small breakthroughs, and the 
+                seemingly endless plateaus of progress. My goal is to bring you the dedication and devotion that once fueled my childhood years.
               </p>
             </div>
 
@@ -281,7 +282,7 @@ function ProgramsSection() {
   const programs = [
     {
       title: 'Beginner & Kids Lessons',
-      description: 'Water acclimation, safety skills, floating, and breath control for young children. Building confidence and essential foundations in a fun, supportive environment.',
+      description: 'From beginner safety skills to building proper stroke technique, building confidence in a fun, supportive environment is essential.',
       image: 'https://images.pexels.com/photos/1323938/pexels-photo-1323938.jpeg?auto=compress&cs=tinysrgb&w=800',
       icon: Heart,
       features: ['Water Safety', 'Floating Skills', 'Breath Control', 'Fun Learning'],
@@ -295,7 +296,7 @@ function ProgramsSection() {
     },
     {
       title: 'Skill & Stroke Refinement',
-      description: 'Advanced competitive coaching, stroke mechanics, endurance, and efficiency refinement for athletes, triathletes, or those seeking to perfect their technique.',
+      description: 'Advanced competitive coaching, stroke mechanics, endurance, and efficiency refinement for competitors seeking to perfect their technique.',
       image: 'https://images.pexels.com/photos/8639881/pexels-photo-8639881.jpeg?auto=compress&cs=tinysrgb&w=800',
       icon: Target,
       features: ['Stroke Mechanics', 'Endurance', 'Competition Prep', 'Technique Analysis'],
@@ -405,6 +406,7 @@ function ContactSection() {
   const [errors, setErrors] = useState({});
 
   const skillLevels = [
+    'Baby (Ages 0-2) - Introduction to Water',
     'Preschool (Ages 2-4) - Beginner',
     'Preschool (Ages 2-4) - Some Experience',
     'Child (Ages 5-8) - Beginner',
@@ -418,7 +420,7 @@ function ContactSection() {
     'Teen (Ages 13-17) - Advanced',
     'Adult (18+) - Beginner',
     'Adult (18+) - Intermediate',
-    'Adult (18+) - Advanced/Competitive',
+    'Adult (18+) - Advanced',
   ];
 
   const validateForm = () => {
