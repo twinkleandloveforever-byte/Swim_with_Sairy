@@ -263,7 +263,7 @@ function AboutSection() {
               </p>
 
               <p>
-                My name is Sairy, and I know better than anyone what it’s like to stand at the edge of the
+                I know better than anyone what it’s like to stand at the edge of the
                 pool deck, wondering if I’d ever truly feel at home with water. Growing up in cold swimsuits, wet 
                 towels, and a seemingly permanent tan taught me that the only to push myself to first place was one lap at a time.
               </p>
