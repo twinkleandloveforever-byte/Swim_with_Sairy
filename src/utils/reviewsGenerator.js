@@ -1,15 +1,12 @@
 const firstNames = [
-  'Daisy', 'George', 'Jessica', 'David', 'Emily', 'James', 'Ashley', 'Chris',
-  'Amanda', 'Balaji', 'Nicole', 'Tyler', 'Megan', 'Brandon', 'Lauren', 'Justin',
-  'Kayla', 'Aaron', 'Kim', 'Raj', 'Marcus', 'Brianna', 'Cameron', 'Jasmine',
-  'Devin', 'Alyssa', 'Zayed', 'Sofia', 'Young', 'Maya', 'Logan', 'Mo',
+  'Daisy', 'George', 'Sayed', 'David', 'Emily', 'James', 'Ashley', 'Abdullah',
+  'Priyasha', 'Balaji', 'Nicole', 'Tyler', 'Raham', 'Brandon', 'Lauren', 'Justin',
+  'Zane', 'Aaron', 'Kim', 'Raj', 'Marcus', 'Brianna', 'Cameron', 'Jasmine',
+  'Devin', 'Alyssa', 'Zayed', 'Xiaomei', 'Young', 'Maya', 'Ming', 'Moe',
 ];
 
 const lastNames = [
-  'Zhang', 'Johnson', 'Williams', 'Cao', 'Jones', 'Garcia', 'Muhammad', 'Davis',
-  'Rodriguez', 'Liang', 'Hernandez', 'Raham', 'Gonzalez', 'Wilson', 'Anderson',
-  'Zhen', 'Patel', 'Moore', 'Sadowski', 'Martin', 'Lee', 'Perez', 'Macguire',
-  'White', 'Harris', 'Sanchez', 'Kiryiaki', 'Choi', 'Abdul', 'Robinson', 'Li',
+  '',
 ];
 
 const reviewTexts = [
@@ -19,6 +16,10 @@ const reviewTexts = [
   'The mobile service is a game changer. No more rushing to pack up the kids and drive across town. The instructor came right to our home and was always on time.',
   'My daughter went from zero experience to joining the club swim team in one summer. The stroke refinement coaching was incredibly detailed and effective.',
   'Like it. awesome coach.'
+  'She is very energetic, my 9 yr old daughter loved her'
+  'I recommend Swim with Sairy for all you folks in Sugar Land area"
+  'love supporting local small businesses.'
+  'Sairy is great.'
 ];
 
 function pickRandom(arr) {
