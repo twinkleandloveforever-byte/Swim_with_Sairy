@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Star } from 'lucide-react';
-import { generateReviews } from './utils/reviewsGenerator';
+import { getReviews } from './utils/reviewsGenerator';
 
 function ReviewCard({ review }) {
   return (
@@ -27,7 +27,7 @@ function ReviewCard({ review }) {
 
 export default function ReviewsMarquee() {
   const [paused, setPaused] = useState(false);
-  const reviews = generateReviews(8);
+  const reviews = getReviews();
   const doubled = [...reviews, ...reviews];
 
   return (
