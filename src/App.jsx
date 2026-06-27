@@ -265,13 +265,13 @@ function AboutSection() {
               <p>
                 I know better than anyone what it’s like to stand at the edge of the
                 pool deck, wondering if I’d ever truly feel at home with water. Growing up in cold swimsuits, wet 
-                towels, and a seemingly permanent tan taught me that the only to push myself to first place was one lap at a time.
+                towels, and a seemingly permanent tan taught me that the only to push myself to the first place medal was one lap at a time.
               </p>
 
               <p>
                 Over the years, the dampness and dedication have turned the swimming pool into my second home, and that is the 
                 exact journey I am so excited to take you on. I understand the challenges, the small breakthroughs, and the 
-                seemingly endless plateaus of progress. My goal is to bring you the exact same devotion that once fueled my childhood years.
+                seemingly endless plateaus of progress. My goal is to bring you the exact same devotion that once fueled my competitive years.
               </p>
             </div>
 
