@@ -112,46 +112,54 @@ function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-100/30 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-36">
         <div className="text-center max-w-5xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-            <Waves className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs sm:text-sm font-medium mb-3 md:mb-4 animate-fade-in">
+            <Waves className="w-3.5 h-3.5 md:w-4 md:h-4" />
             Based in Sugar Land, Texas
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ocean-900 leading-tight mb-6 animate-slide-up">
+          <div className="flex justify-center mb-4 md:mb-6 animate-slide-up">
+            <img
+              src="https://i.postimg.cc/hPd5xdq7/Copilot-20260627-004810.png"
+              alt="Swim with Sairy"
+              className="max-h-[16vh] sm:max-h-[20vh] md:max-h-[24vh] lg:max-h-[26vh] w-auto object-contain"
+            />
+          </div>
+
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-ocean-900 leading-tight mb-3 md:mb-5 animate-slide-up">
             Private Swim Coaching
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600 mt-2">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600 mt-1 md:mt-2">
               In Your Own Pool
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-ocean-700 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base sm:text-lg md:text-xl text-ocean-700 max-w-3xl mx-auto mb-6 md:mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Professional, individualized swim lessons brought directly to your home or local community pool.
             Experience the difference of dedicated, one-on-one attention.
           </p>
 
-          <div className="bg-gradient-to-r from-ocean-900 via-ocean-800 to-cyan-800 rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <p className="text-cyan-200 text-sm md:text-base font-medium mb-3 uppercase tracking-wider">
+          <div className="bg-gradient-to-r from-ocean-900 via-ocean-800 to-cyan-800 rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-8 shadow-2xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-cyan-200 text-xs sm:text-sm md:text-base font-medium mb-2 md:mb-3 uppercase tracking-wider">
               Book Your Lesson Today
             </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white">
-              <a href="tel:3463263650" className="flex items-center gap-2 text-xl md:text-2xl lg:text-3xl font-bold hover:text-cyan-300 transition-colors">
-                <Phone className="w-6 h-6 md:w-8 md:h-8" />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 text-white">
+              <a href="tel:3463263650" className="flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold hover:text-cyan-300 transition-colors">
+                <Phone className="w-5 h-5 md:w-8 md:h-8" />
                 <span>346-326-3650</span>
               </a>
               <div className="hidden md:block w-px h-8 bg-white/30" />
-              <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 text-lg md:text-xl lg:text-2xl font-semibold hover:text-cyan-300 transition-colors">
-                <Mail className="w-6 h-6 md:w-7 md:h-7" />
+              <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 text-sm sm:text-base md:text-xl lg:text-2xl font-semibold hover:text-cyan-300 transition-colors">
+                <Mail className="w-5 h-5 md:w-7 md:h-7" />
                 <span className="break-all">swimwithsairy@gmail.com</span>
               </a>
             </div>
           </div>
 
-          <div className="mt-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <a href="#contact" className="inline-flex items-center gap-2 text-ocean-600 hover:text-ocean-700 font-medium">
+          <div className="mt-6 md:mt-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <a href="#contact" className="inline-flex items-center gap-2 text-ocean-600 hover:text-ocean-700 font-medium text-sm md:text-base">
               <span>Scroll to inquire</span>
-              <ChevronDown className="w-5 h-5 animate-bounce" />
+              <ChevronDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
             </a>
           </div>
         </div>
