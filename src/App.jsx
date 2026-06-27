@@ -104,18 +104,18 @@ function HeroSection() {
         <div className="text-center max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Waves className="w-4 h-4" />
-            Serving Sugar Land, Texas & Surrounding Areas
+            Based in Sugar Land, Texas
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ocean-900 leading-tight mb-6 animate-slide-up">
-            Private, Mobile Swim Coaching
+            Private Swim Coaching
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600 mt-2">
-              Premium Instruction in Your Pool
+              In Your Own Pool
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-ocean-700 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Professional, individualized swim lessons brought directly to your home pool or local community pool.
+            Professional, individualized swim lessons brought directly to your home or local community pool.
             Experience the difference of dedicated, one-on-one attention.
           </p>
 
@@ -131,7 +131,7 @@ function HeroSection() {
               <div className="hidden md:block w-px h-8 bg-white/30" />
               <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 text-lg md:text-xl lg:text-2xl font-semibold hover:text-cyan-300 transition-colors">
                 <Mail className="w-6 h-6 md:w-7 md:h-7" />
-                <span className="break-all">twinkleandloveforever@gmail.com</span>
+                <span className="break-all">swimwithsairy@gmail.com</span>
               </a>
             </div>
           </div>
@@ -178,8 +178,7 @@ function MobileAdvantage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600"> Most Comfortable</span>
             </h2>
             <p className="text-lg text-ocean-700 leading-relaxed mb-8">
-              Based in Sugar Land, TX, I travel directly to your backyard home pool or designated neighborhood community pool
-              for ultimate safety, convenience, and low-distraction learning.
+              Based in Sugar Land, TX, I also serve Richmond, Rosenberg, Stafford, southeast Katy, and other surrounding areas.
             </p>
 
             <div className="space-y-4">
@@ -187,7 +186,6 @@ function MobileAdvantage() {
                 { icon: Heart, text: 'Familiar environment reduces anxiety' },
                 { icon: Users, text: 'One-on-one dedicated attention' },
                 { icon: Clock, text: 'Flexible scheduling that works for you' },
-                { icon: Award, text: 'No crowded lanes or distractions' },
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-4 p-4 bg-ocean-50 rounded-xl hover:bg-ocean-100 transition-colors">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-400 to-ocean-500 rounded-xl flex items-center justify-center">
