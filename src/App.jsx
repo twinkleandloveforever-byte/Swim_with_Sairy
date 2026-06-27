@@ -35,7 +35,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <button onClick={() => scrollToSection('home')} className="font-display font-bold text-lg md:text-xl text-ocean-900 hover:text-cyan-600 transition-colors">
-            Private Swim Instruction
+            Swim with Sairy
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -223,7 +223,7 @@ function AboutSection() {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-ocean-900">Certified</p>
+                    <p className="font-bold text-ocean-900">Sairy</p>
                     <p className="text-sm text-ocean-600">Professional Instructor</p>
                   </div>
                 </div>
@@ -233,8 +233,8 @@ function AboutSection() {
 
           <div className="lg:col-span-3">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-900 mb-6">
-              Meet Your Independent
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600">Swim Instructor</span>
+              Meet Your Instructor
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600">Coach Sairy</span>
             </h2>
 
             <div className="space-y-6 text-ocean-700 leading-relaxed">
