@@ -612,7 +612,7 @@ function ContactSection() {
                   onChange={handleChange}
                   rows={3}
                   className={`w-full px-4 py-3 rounded-xl border-2 ${errors.location ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none resize-none`}
-                  placeholder="Describe your home pool or community pool setup in Sugar Land area..."
+                  placeholder="Describe your home pool or community pool setup..."
                 />
                 {errors.location && <p className="mt-1 text-sm text-coral-500">{errors.location}</p>}
               </div>
