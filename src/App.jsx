@@ -159,7 +159,7 @@ function MobileAdvantage() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-ocean-100 to-cyan-100 overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/265846/pexels-photo-265846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://i.postimg.cc/yNC9vtfb/Screenshot-2026-06-20-153057.jpg"
                 alt="Beautiful outdoor pool setting for private swim lessons"
                 className="w-full h-full object-cover"
               />
@@ -212,7 +212,7 @@ function AboutSection() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/863980/pexels-photo-863980.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://i.postimg.cc/g0m4txjn/image000000.jpg"
                   alt="Professional swim instructor portrait"
                   className="w-full h-full object-cover"
                 />
@@ -283,21 +283,21 @@ function ProgramsSection() {
     {
       title: 'Beginner & Kids Lessons',
       description: 'From beginner safety skills to building proper stroke technique, building confidence in a fun, supportive environment is essential.',
-      image: 'https://images.pexels.com/photos/1323938/pexels-photo-1323938.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://i.postimg.cc/J7NNvrVC/360-F-138231717-Zd1j-SAul-B7W41MCALPo-RTRKMI7e-Z2Jg-S.jpg',
       icon: Heart,
       features: ['Water Safety', 'Floating Skills', 'Breath Control', 'Fun Learning'],
     },
     {
       title: 'Adult Swim Instruction',
       description: 'Tailored for adults learning to swim, overcoming water anxiety, or mastering low-impact fitness. It\'s never too late to become confident in the water.',
-      image: 'https://images.pexels.com/photos/35580/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://i.postimg.cc/DZdSjzWS/360-F-143777213-ryg-DL4sjci25Abauf-Yjk-Mfsf4j-Aa-Amar.jpg',
       icon: GraduationCap,
       features: ['Overcome Anxiety', 'Build Confidence', 'Low-Impact Fitness', 'Personal Pace'],
     },
     {
       title: 'Skill & Stroke Refinement',
       description: 'Advanced competitive coaching, stroke mechanics, endurance, and efficiency refinement for competitors seeking to perfect their technique.',
-      image: 'https://images.pexels.com/photos/8639881/pexels-photo-8639881.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://i.postimg.cc/FRnMQyJN/professional-swimmer-performing-butterfly-stroke-in-competitive-swim-meet-photo.jpg',
       icon: Target,
       features: ['Stroke Mechanics', 'Endurance', 'Competition Prep', 'Technique Analysis'],
     },
