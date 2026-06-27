@@ -19,6 +19,13 @@ const reviewTexts = [
   'The mobile service is a game changer. No more rushing to pack up the kids and drive across town. The instructor came right to our home and was always on time.',
   'My daughter went from zero experience to joining the club swim team in one summer. The stroke refinement coaching was incredibly detailed and effective.',
   'Like it. awesome coach.'
+  'Sairy is great'
+  'i love supporting local small businesses.'
+  'My kids LOVEEEEE swim lessons now! She\'s their favorite teacher.'
+  'Sairy made me feel supported even as an adult swimmer'
+  'i recommend Swim with Sairy to all you sugar land folks.'
+  'The best price for mobile private lessons here.'
+  'She did a great job with my son, who has ADHD. She knew just how to make things fun and engaging.'
 ];
 
 function pickRandom(arr) {
