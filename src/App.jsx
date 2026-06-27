@@ -665,13 +665,13 @@ function Footer() {
     <footer className="bg-ocean-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="font-display font-bold text-xl mb-4">Private Swim Instruction</p>
+          <p className="font-display font-bold text-xl mb-4">Swim with Sairy</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-ocean-200 mb-6">
             <a href="tel:3463263650" className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
               <Phone className="w-4 h-4" />
               <span>346-326-3650</span>
             </a>
-            <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
+            <a href="mailto:swimwithsairy.com" className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
               <Mail className="w-4 h-4" />
               <span>swimwithsairy@gmail.com</span>
             </a>
@@ -685,7 +685,7 @@ function Footer() {
           </p>
           <div className="mt-6 pt-6 border-t border-ocean-800">
             <p className="text-ocean-400 text-sm">
-              &copy; {new Date().getFullYear()} Private Swim Instruction. All rights reserved.
+              &copy; {new Date().getFullYear()} Swim with Sairy. All rights reserved.
             </p>
           </div>
         </div>
