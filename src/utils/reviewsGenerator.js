@@ -24,8 +24,8 @@ const reviews = [
     text: 'Professional, punctual, and genuinely caring. You can tell this isn\'t just a job — there\'s real passion for teaching water safety and proper technique.',
   },
   {
-    name: 'Jasmine Okafor',
-    text: 'We tried group lessons elsewhere with no progress. After just three private sessions here, the difference was night and day. Worth every penny.',
+    name: 'Dante Morris Alighieri',
+    text: 'Swim with Sairy has the best competitive pricing in the area after much research. Go give it a try',
   },
   {
     name: 'Blake Sandoval',
