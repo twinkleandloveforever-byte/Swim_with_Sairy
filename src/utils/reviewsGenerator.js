@@ -2,14 +2,14 @@ const firstNames = [
   'Daisy', 'George', 'Jessica', 'David', 'Emily', 'James', 'Ashley', 'Chris',
   'Amanda', 'Balaji', 'Nicole', 'Tyler', 'Megan', 'Brandon', 'Lauren', 'Justin',
   'Kayla', 'Aaron', 'Kim', 'Raj', 'Marcus', 'Brianna', 'Cameron', 'Jasmine',
-  'Devin', 'Alyssa', 'Al-Zayed', 'Sofia', 'Ji-Young', 'Maya', 'Logan', 'Mo',
+  'Devin', 'Alyssa', 'Zayed', 'Sofia', 'Young', 'Maya', 'Logan', 'Mo',
 ];
 
 const lastNames = [
   'Zhang', 'Johnson', 'Williams', 'Cao', 'Jones', 'Garcia', 'Muhammad', 'Davis',
-  'Rodriguez', 'Martinez', 'Hernandez', 'Raham', 'Gonzalez', 'Wilson', 'Anderson',
-  'Zhen', 'Patel', 'Moore', 'Jackson', 'Martin', 'Lee', 'Perez', 'Macguire',
-  'White', 'Harris', 'Sanchez', 'Clark', 'Choi', 'Abdul', 'Robinson', 'Li',
+  'Rodriguez', 'Liang', 'Hernandez', 'Raham', 'Gonzalez', 'Wilson', 'Anderson',
+  'Zhen', 'Patel', 'Moore', 'Sadowski', 'Martin', 'Lee', 'Perez', 'Macguire',
+  'White', 'Harris', 'Sanchez', 'Kiryiaki', 'Choi', 'Abdul', 'Robinson', 'Li',
 ];
 
 const reviewTexts = [
