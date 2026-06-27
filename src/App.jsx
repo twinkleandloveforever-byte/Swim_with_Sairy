@@ -44,7 +44,7 @@ function Navbar() {
             aria-label="Back to top"
           >
             <img
-              src="https://i.postimg.cc/gjNQCVkr/Gemini-Generated-Image-djoh82djoh82djoh-removebg-preview.png"
+              src="https://i.postimg.cc/vHZmZGFd/swimfixed-removebg-preview.png"
               alt="Swim with Sairy"
               className="h-10 md:h-12 w-auto"
             />
