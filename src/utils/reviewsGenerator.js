@@ -17,7 +17,7 @@ const reviewTexts = [
   'My daughter went from zero experience to joining the club swim team in one summer. The stroke refinement coaching was incredibly detailed and effective.',
   'Like it. awesome coach.'
   'She is very energetic, my 9 yr old daughter loved her'
-  'I recommend Swim with Sairy for all you folks in Sugar Land area"
+  'I recommend Swim with Sairy for all you folks in Sugar Land area'
   'love supporting local small businesses.'
   'Sairy is great.'
 ];
