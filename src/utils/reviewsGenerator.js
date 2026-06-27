@@ -1,15 +1,15 @@
 const reviews = [
   {
-    name: 'Sarah Whitfield',
-    text: 'Absolutely incredible experience! The instructor was patient, professional, and made every lesson fun. My kids went from fearing the water to swimming confidently in just a few weeks.',
+    name: 'Sarah Mora',
+    text: 'I recommend Swim with Sairy to all Sugar land folks.',
   },
   {
-    name: 'Marcus Delgado',
+    name: 'Eliza Chen',
     text: 'Best decision we ever made. Having lessons in our own pool made everything so convenient. The personalized attention made a huge difference in my son\'s progress.',
   },
   {
     name: 'Priya Ramanathan',
-    text: 'I was terrified of water my whole life and finally decided to learn as an adult. The patience and encouragement I received was beyond what I expected. I can now swim laps!',
+    text: 'I was terrified of water my whole life and finally decided to learn as a 52 year old. The patience and encouragement I received was beyond what I expected. I can now swim laps and even several different strokes!',
   },
   {
     name: 'Tyler Brooks',
@@ -45,11 +45,11 @@ const reviews = [
   },
   {
     name: 'Logan Fairbanks',
-    text: 'The one-on-one attention is unmatched. Every drill was tailored to exactly what my daughter needed. We saw improvement every single lesson.',
+    text: 'I love supporting local small businesses!',
   },
   {
     name: 'Riley Nakamura',
-    text: 'Our instructor turned a reluctant five-year-old into a confident swimmer who now loves the pool. The calm, patient approach made all the difference for our family.',
+    text: 'Sairy is great',
   },
 ];
 
