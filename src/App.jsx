@@ -136,7 +136,6 @@ function HeroSection() {
 
           <p className="text-base sm:text-lg md:text-xl text-ocean-700 max-w-3xl mx-auto mb-6 md:mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Professional, individualized swim lessons brought directly to your home or local community pool.
-            Experience the difference of dedicated, one-on-one attention.
           </p>
 
           <div className="bg-gradient-to-r from-ocean-900 via-ocean-800 to-cyan-800 rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-8 shadow-2xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
