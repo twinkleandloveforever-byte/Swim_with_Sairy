@@ -676,7 +676,7 @@ function ContactSection() {
         </div>
       </div>
 
-      <ThemeModal isOpen={showModal} onClose={() => setShowModal(false)} />
+     <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }
