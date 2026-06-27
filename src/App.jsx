@@ -34,9 +34,21 @@ function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <button onClick={() => scrollToSection('home')} className="font-display font-bold text-lg md:text-xl text-ocean-900 hover:text-cyan-600 transition-colors">
-            Swim with Sairy
-          </button>
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('home');
+            }}
+            className="flex items-center"
+            aria-label="Back to top"
+          >
+            <img
+              src="https://i.postimg.cc/gjNQCVkr/Gemini-Generated-Image-djoh82djoh82djoh-removebg-preview.png"
+              alt="Swim with Sairy"
+              className="h-10 md:h-12 w-auto"
+            />
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
