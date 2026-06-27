@@ -203,9 +203,9 @@ function MobileAdvantage() {
 
             <div className="space-y-4">
               {[
-                { icon: Heart, text: 'Familiar environment reduces anxiety' },
-                { icon: Users, text: 'One-on-one dedicated attention' },
-                { icon: Clock, text: 'Flexible scheduling that works for you' },
+                { icon: Heart, text: 'I travel to YOU' },
+                { icon: Users, text: 'No pool? No problem! I host lessons at pools of my choice too.' },
+                { icon: Clock, text: 'Flexible scheduling, 7 days a week' },
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-4 p-4 bg-ocean-50 rounded-xl hover:bg-ocean-100 transition-colors">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-400 to-ocean-500 rounded-xl flex items-center justify-center">
