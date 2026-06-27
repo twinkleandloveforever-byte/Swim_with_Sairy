@@ -119,13 +119,12 @@ function HeroSection() {
             Based in Sugar Land, Texas
           </div>
 
-          <div className="mb-6 animate-slide-up flex justify-center items-center">
-            <img
-              src="https://i.postimg.cc/gjNQCVkr/Gemini-Generated-Image-djoh82djoh82djoh-removebg-preview.png"
-              alt="Swim with Sairy"
-              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto"
-            />
-          </div>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ocean-900 leading-tight mb-6 animate-slide-up">
+            Private Swim Coaching
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600 mt-2">
+              In Your Own Pool
+            </span>
+          </h1>
 
           <p className="text-lg md:text-xl text-ocean-700 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Professional, individualized swim lessons brought directly to your home or local community pool.
