@@ -478,10 +478,12 @@ function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/xpwzgvqk', {
+      // Updated the fetch URL to your correct Formspree ID: mzdlpdzj
+      const response = await fetch('https://formspree.io/f/mzdlpdzj', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           fullName: formData.fullName,
@@ -505,6 +507,8 @@ function ContactSection() {
           preferredTimes: '',
         });
         setErrors({});
+      } else {
+        console.error('Formspree returned an error response.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -539,7 +543,7 @@ function ContactSection() {
                 <span>Phone: 346-326-3650</span>
               </a>
               <div className="hidden md:block w-px h-8 bg-white/30" />
-              <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 text-base md:text-lg font-semibold hover:text-cyan-300 transition-colors">
+              <a href="mailto:swimwithsairy@gmail.com" className="flex items-center gap-2 text-base md:text-lg font-semibold hover:text-cyan-300 transition-colors">
                 <Mail className="w-5 h-5 md:w-6 md:h-6" />
                 <span>swimwithsairy@gmail.com</span>
               </a>
@@ -672,11 +676,10 @@ function ContactSection() {
         </div>
       </div>
 
-      <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <ThemeModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }
-
 // ============ FOOTER ============
 function Footer() {
   return (
