@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Clock, Users, Award, Heart, CheckCircle, Waves, ChevronDown, GraduationCap, Timer, Target } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Clock, Users, Award, Heart, CheckCircle, Waves, ChevronDown, GraduationCap, Target } from 'lucide-react';
+import ReviewsMarquee from './ReviewsMarquee';
 
 // ============ NAVIGATION ============
 function Navbar() {
@@ -14,7 +15,7 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -362,7 +363,7 @@ function ProgramsSection() {
 }
 
 // ============ SUCCESS MODAL ============
-function SuccessModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function SuccessModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
@@ -403,7 +404,7 @@ function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
 
   const skillLevels = [
     'Preschool (Ages 2-4) - Beginner',
@@ -423,7 +424,7 @@ function ContactSection() {
   ];
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {};
+    const newErrors = {};
 
     if (!formData.fullName.trim()) {
       newErrors.fullName = 'Full name is required';
@@ -451,7 +452,7 @@ function ContactSection() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) return;
@@ -494,7 +495,7 @@ function ContactSection() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     if (errors[name]) {
@@ -702,6 +703,7 @@ function App() {
       <MobileAdvantage />
       <AboutSection />
       <ProgramsSection />
+      <ReviewsMarquee />
       <ContactSection />
       <Footer />
     </div>
