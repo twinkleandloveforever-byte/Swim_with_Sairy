@@ -1,6 +1,6 @@
 const reviews = [
   {
-    name: 'George Morris',
+    name: 'George',
     text: 'Recommend Swim with Sairy to all Sugar land folks.',
   },
   {
@@ -16,7 +16,7 @@ const reviews = [
     text: 'My daughter went from zero experience to joining the swim team in one summer.',
   },
   {
-    name: 'Derek Calloway',
+    name: 'Amani Calloway',
     text: 'All 4 kids in a 60-minute lesson. Didn\'t expect so much progress!!! Sairy has a gift for making children smile and learn. The kids always ask when Sairy will come back.',
   },
   {
@@ -25,7 +25,7 @@ const reviews = [
   },
   {
     name: 'McKinzy',
-    text: 'I love supporting local small businesses!',
+    text: 'I love supporting local small businesses, really high quality lesson plan',
   },
   {
     name: 'Riley Nakamura',
