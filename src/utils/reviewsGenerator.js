@@ -1,15 +1,15 @@
 const reviews = [
   {
     name: 'George',
-    text: 'Recommend Swim with Sairy to all Sugar land folks.',
+    text: 'Recommend Swim with Sairy to all you Sugar land folks.',
   },
   {
     name: 'Daisy Zhang',
-    text: 'Huge difference in my son\'s progress. Dont even bother with other instructors, she is the best',
+    text: 'Huge difference in my daughter\'s progress. Dont even bother with other instructors, Sairy\'s the absolute best!,
   },
   {
     name: 'Priya Ramanathan',
-    text: 'I was terrified of water my whole life and finally decided to learn as a 52 year old. The patience and encouragement I received was beyond what I expected. I can now swim laps and even several different strokes!',
+    text: 'I was terrified of water my whole life and finally decided to learn as a 52 year old. The patience and encouragement I received was beyond what I expected. I can now swim laps and even different strokes!',
   },
   {
     name: 'Celine',
@@ -17,19 +17,15 @@ const reviews = [
   },
   {
     name: 'Amani Calloway',
-    text: 'All 4 kids in a 60-minute lesson. Didn\'t expect so much progress!!! Sairy has a gift for making children smile and learn. The kids always ask when Sairy will come back.',
+    text: 'The kids always ask when Sairy will come back.',
   },
   {
-    name: 'Dante Morris Alighieri',
-    text: 'Swim with Sairy has the best competitive pricing in the area after much research. Go give it a try',
-  },
-  {
-    name: 'McKinzy',
-    text: 'I love supporting local small businesses, really high quality lesson plan',
+    name: 'Dante Alighieri',
+    text: 'Sairy\'s prices are very reasonable. Dont bother with group lessons, you are also paying for time that you aren\'t recieving instruction, priavte is ALWAYS the way to go.',
   },
   {
     name: 'Riley Nakamura',
-    text: 'Sairy is great',
+    text: 'Getting back into swimming after 6 yrs. Coach really helped guide me thru, I enjoy class!',
   },
 ];
 
