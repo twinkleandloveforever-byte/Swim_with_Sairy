@@ -301,7 +301,7 @@ function ProgramsSection() {
     {
       title: 'Beginner & Kids Lessons',
       description: 'From beginner safety skills to building proper stroke technique, building confidence in a fun, supportive environment is essential.',
-      image: 'https://i.postimg.cc/J7NNvrVC/360-F-138231717-Zd1j-SAul-B7W41MCALPo-RTRKMI7e-Z2Jg-S.jpg',
+      image: 'https://i.postimg.cc/yYpPbQ1S/2c86c171-cae2-4b62-8985-5d2ef443a584.jpg',
       icon: Heart,
       features: ['Water Safety', 'Floating Skills', 'Breath Control', 'Fun Learning'],
     },
