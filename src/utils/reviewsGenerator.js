@@ -5,7 +5,7 @@ const reviews = [
   },
   {
     name: 'Daisy Zhang',
-    text: 'Huge difference in my daughter\'s progress. Dont even bother with other instructors, Sairy\'s the absolute best!,
+    text: 'Huge difference in my daughter\'s progress. Dont even bother with other instructors, Sairy\'s the absolute best!',
   },
   {
     name: 'Priya Ramanathan',
