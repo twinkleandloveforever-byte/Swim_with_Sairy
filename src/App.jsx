@@ -277,8 +277,8 @@ function AboutSection() {
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
                 { number: 'Lifeguard', label: 'Certified' },
-                { number: 'CPR', label: 'Certified' },
-                { number: 'AED', label: 'Certified' },
+                { number: 'CPR/AED', label: 'Certified' },
+                { number: 'Water Safety Instructor', label: 'Certified' },
               ].map((item, index) => (
                 <div key={index} className="bg-white rounded-xl p-4 text-center shadow-lg">
                   <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-ocean-600">
