@@ -308,14 +308,14 @@ function ProgramsSection() {
     {
       title: 'Adult Swim Instruction',
       description: 'Tailored for adults learning to swim, overcoming water anxiety, or mastering low-impact fitness. It\'s never too late to become confident in the water.',
-      image: 'https://i.postimg.cc/DZdSjzWS/360-F-143777213-ryg-DL4sjci25Abauf-Yjk-Mfsf4j-Aa-Amar.jpg',
+      image: 'https://i.postimg.cc/bYVqgyNX/IMG-20260703-170513.jpg',
       icon: GraduationCap,
       features: ['Overcome Anxiety', 'Build Confidence', 'Low-Impact Fitness', 'Personal Pace'],
     },
     {
       title: 'Skill & Stroke Refinement',
       description: 'Advanced competitive coaching, stroke mechanics, endurance, and efficiency refinement for competitors seeking to perfect their technique.',
-      image: 'https://i.postimg.cc/FRnMQyJN/professional-swimmer-performing-butterfly-stroke-in-competitive-swim-meet-photo.jpg',
+      image: 'https://i.postimg.cc/y8gxcJmC/20260705-184156(1).jpg',
       icon: Target,
       features: ['Stroke Mechanics', 'Endurance', 'Competition Prep', 'Technique Analysis'],
     },
