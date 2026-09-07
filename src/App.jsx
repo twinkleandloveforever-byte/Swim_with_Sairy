@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Clock, Users, Award, Heart, CheckCircle, Waves, ChevronDown, GraduationCap, Target } from 'lucide-react';
+import { 
+  Menu, X, Phone, Mail, MapPin, Clock, Users, Award, 
+  Heart, CheckCircle, Waves, ChevronDown, GraduationCap, 
+  Target, Search, ArrowRight, CheckCircle2, XCircle 
+} from 'lucide-react';
 import ReviewsMarquee from './ReviewsMarquee';
 
 // ============ NAVIGATION ============
@@ -148,7 +152,7 @@ function HeroSection() {
                 <span>346-326-3650</span>
               </a>
               <div className="hidden md:block w-px h-8 bg-white/30" />
-              <a href="mailto:twinkleandloveforever@gmail.com" className="flex items-center gap-2 text-sm sm:text-base md:text-xl lg:text-2xl font-semibold hover:text-cyan-300 transition-colors">
+              <a href="mailto:swimwithsairy@gmail.com" className="flex items-center gap-2 text-sm sm:text-base md:text-xl lg:text-2xl font-semibold hover:text-cyan-300 transition-colors">
                 <Mail className="w-5 h-5 md:w-7 md:h-7" />
                 <span className="break-all">swimwithsairy@gmail.com</span>
               </a>
@@ -169,25 +173,16 @@ function HeroSection() {
   );
 }
 
-// ============ MANUALLY EDIT YOUR APPROVED ZIP CODES HERE ============
+// ============ APPROVED ZIP CODES ============
 const APPROVED_ZIP_CODES = [
-  '77478', // Sugar Land
-  '77479', // Sugar Land
-  '77498', // Sugar Land
-  '77406', // Richmond
-  '77407', // Richmond
-  '77469', // Richmond / Rosenberg
-  '77471', // Rosenberg
-  '77477', // Stafford
-  '77494', // Southeast Katy
-  '77450', // Katy
-  '77096', // Houston / Bellaire area
+  '77478', '77479', '77498', '77406', '77407', '77469', 
+  '77471', '77477', '77494', '77450', '77096'
 ];
 
 // ============ MOBILE ADVANTAGE SECTION ============
 function MobileAdvantage() {
   const [zipInput, setZipInput] = useState('');
-  const [searchStatus, setSearchStatus] = useState('idle'); // 'idle' | 'success' | 'out_of_range' | 'invalid'
+  const [searchStatus, setSearchStatus] = useState('idle');
   const [clientEmail, setClientEmail] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
@@ -226,10 +221,8 @@ function MobileAdvantage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT COLUMN: ZIP CODE SEARCH WIDGET */}
           <div className="relative">
             <div className="rounded-3xl bg-gradient-to-br from-ocean-50 to-cyan-50 p-8 md:p-10 border border-ocean-100 shadow-2xl">
-              
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-ocean-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
                   <MapPin className="w-6 h-6" />
@@ -240,7 +233,6 @@ function MobileAdvantage() {
                 </div>
               </div>
 
-              {/* SEARCH FORM / RESULT DISPLAY */}
               {searchStatus === 'idle' || searchStatus === 'invalid' ? (
                 <form onSubmit={handleZipCheck} className="space-y-4">
                   <div>
@@ -276,7 +268,6 @@ function MobileAdvantage() {
                   </button>
                 </form>
               ) : searchStatus === 'success' ? (
-                /* SUCCESS STATE */
                 <div className="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm text-center space-y-4">
                   <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
@@ -289,7 +280,7 @@ function MobileAdvantage() {
                   </div>
                   <div className="pt-2 flex flex-col gap-2">
                     <a
-                      href="#booking"
+                      href="#contact"
                       className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-colors shadow-md block"
                     >
                       Schedule Your Lessons Now
@@ -303,7 +294,6 @@ function MobileAdvantage() {
                   </div>
                 </div>
               ) : (
-                /* OUT OF SERVICE AREA STATE */
                 <div className="bg-white p-6 rounded-2xl border border-amber-100 shadow-sm text-center space-y-4">
                   <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto">
                     <XCircle className="w-8 h-8" />
@@ -353,7 +343,6 @@ function MobileAdvantage() {
                 </div>
               )}
 
-              {/* LOCATION BADGE FOOTER */}
               <div className="mt-8 pt-6 border-t border-ocean-100 flex items-center justify-between text-xs text-ocean-600">
                 <span className="flex items-center gap-1.5 font-medium">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -363,7 +352,6 @@ function MobileAdvantage() {
               </div>
             </div>
 
-            {/* FLOATING LOCATION DECORATION */}
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-cyan-500 to-ocean-500 rounded-2xl p-4 md:p-6 shadow-xl text-white hidden sm:block">
               <MapPin className="w-8 h-8 mb-2" />
               <p className="font-bold">Sugar Land, TX</p>
@@ -371,7 +359,6 @@ function MobileAdvantage() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: TEXT DETAILS */}
           <div>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-900 mb-6">
               Learn Where You're
@@ -402,6 +389,7 @@ function MobileAdvantage() {
     </section>
   );
 }
+
 // ============ ABOUT SECTION ============
 function AboutSection() {
   return (
@@ -439,7 +427,7 @@ function AboutSection() {
 
             <div className="space-y-6 text-ocean-700 leading-relaxed">
               <p className="text-lg">
-              I started Swim with Sairy at 16 years old with a simple dream: to bring my favorite sport to my local community, helping people of all ages unlock a lifetime of fun and confidence in the water. For me, the water is a place of complete calm: that gentle, silky flow brushing over your skin as the world seems to fade away...
+                I started Swim with Sairy at 16 years old with a simple dream: to bring my favorite sport to my local community, helping people of all ages unlock a lifetime of fun and confidence in the water. For me, the water is a place of complete calm: that gentle, silky flow brushing over your skin as the world seems to fade away...
               </p>
 
               <p>
@@ -659,7 +647,6 @@ function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      // Updated the fetch URL to your correct Formspree ID: mzdlpdzj
       const response = await fetch('https://formspree.io/f/mzdlpdzj', {
         method: 'POST',
         headers: {
@@ -724,7 +711,7 @@ function ContactSection() {
                 <span>Phone: 346-326-3650</span>
               </a>
               <div className="hidden md:block w-px h-8 bg-white/30" />
-              <a href="mailto:swimwithsairy@gmail.com" className="flex items-center gap-2 text-base md:text-lg font-semibold hover:text-cyan-300 transition-colors">
+              <a href="mailto:swimwithsairy@gmail.com" className="flex items-center gap-2 text-lg md:text-xl font-bold hover:text-cyan-300 transition-colors">
                 <Mail className="w-5 h-5 md:w-6 md:h-6" />
                 <span>swimwithsairy@gmail.com</span>
               </a>
@@ -732,184 +719,117 @@ function ContactSection() {
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-ocean-100">
-            <div className="space-y-6">
-              <div>
-                <label htmlFor="fullName" className="block text-sm font-semibold text-ocean-800 mb-2">
-                  Full Name <span className="text-coral-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.fullName ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none`}
-                  placeholder="Your full name"
-                />
-                {errors.fullName && <p className="mt-1 text-sm text-coral-500">{errors.fullName}</p>}
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-ocean-800 mb-2">
-                    Email Address <span className="text-coral-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-xl border-2 ${errors.email ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none`}
-                    placeholder="you@email.com"
-                  />
-                  {errors.email && <p className="mt-1 text-sm text-coral-500">{errors.email}</p>}
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-ocean-800 mb-2">
-                    Phone Number <span className="text-coral-500">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-xl border-2 ${errors.phone ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none`}
-                    placeholder="(XXX) XXX-XXXX"
-                  />
-                  {errors.phone && <p className="mt-1 text-sm text-coral-500">{errors.phone}</p>}
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="swimmerAge" className="block text-sm font-semibold text-ocean-800 mb-2">
-                  Swimmer's Age & Current Skill Level <span className="text-coral-500">*</span>
-                </label>
-                <select
-                  id="swimmerAge"
-                  name="swimmerAge"
-                  value={formData.swimmerAge}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.swimmerAge ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none bg-white`}
-                >
-                  <option value="">Select age group and skill level</option>
-                  {skillLevels.map((level) => (
-                    <option key={level} value={level}>{level}</option>
-                  ))}
-                </select>
-                {errors.swimmerAge && <p className="mt-1 text-sm text-coral-500">{errors.swimmerAge}</p>}
-              </div>
-
-              <div>
-                <label htmlFor="location" className="block text-sm font-semibold text-ocean-800 mb-2">
-                  Location / Pool Access Details <span className="text-coral-500">*</span>
-                </label>
-                <textarea
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  rows={3}
-                  className={`w-full px-4 py-3 rounded-xl border-2 ${errors.location ? 'border-coral-500' : 'border-ocean-200'} focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none resize-none`}
-                  placeholder="Describe your home pool or community pool setup..."
-                />
-                {errors.location && <p className="mt-1 text-sm text-coral-500">{errors.location}</p>}
-              </div>
-
-              <div>
-                <label htmlFor="preferredTimes" className="block text-sm font-semibold text-ocean-800 mb-2">
-                  Preferred Days and Times
-                </label>
-                <textarea
-                  id="preferredTimes"
-                  name="preferredTimes"
-                  value={formData.preferredTimes}
-                  onChange={handleChange}
-                  rows={2}
-                  className="w-full px-4 py-3 rounded-xl border-2 border-ocean-200 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 transition-all outline-none resize-none"
-                  placeholder="e.g., Weekday mornings, Saturday afternoons, flexible schedule..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 to-ocean-500 text-white py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-ocean-600 transition-all shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Mail className="w-5 h-5" />
-                    Submit Inquiry & Send Email
-                  </>
-                )}
-              </button>
+        <div className="max-w-2xl mx-auto bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-ocean-100">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="block text-sm font-semibold text-ocean-900 mb-2">Full Name *</label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500"
+                placeholder="John Doe"
+              />
+              {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
             </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-semibold text-ocean-900 mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500"
+                  placeholder="john@example.com"
+                />
+                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-ocean-900 mb-2">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500"
+                  placeholder="(346) 326-3650"
+                />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-ocean-900 mb-2">Swimmer Age & Level *</label>
+              <select
+                name="swimmerAge"
+                value={formData.swimmerAge}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500 bg-white"
+              >
+                <option value="">Select Swimmer Level...</option>
+                {skillLevels.map((level, idx) => (
+                  <option key={idx} value={level}>{level}</option>
+                ))}
+              </select>
+              {errors.swimmerAge && <p className="text-red-500 text-xs mt-1">{errors.swimmerAge}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-ocean-900 mb-2">Location / Pool Availability *</label>
+              <input
+                type="text"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500"
+                placeholder="e.g., Home pool in Sugar Land, or need local pool"
+              />
+              {errors.location && <p className="text-red-500 text-xs mt-1">{errors.location}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-ocean-900 mb-2">Preferred Days / Times</label>
+              <textarea
+                name="preferredTimes"
+                value={formData.preferredTimes}
+                onChange={handleChange}
+                rows={3}
+                className="w-full px-4 py-3 rounded-xl border border-ocean-200 focus:outline-none focus:border-cyan-500"
+                placeholder="e.g., Weekday evenings after 5 PM, or Saturday mornings"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-ocean-600 hover:from-cyan-600 hover:to-ocean-700 text-white font-bold rounded-xl shadow-lg transition-all"
+            >
+              {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+            </button>
           </form>
         </div>
       </div>
 
-     <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
-  );
-}
-// ============ FOOTER ============
-function Footer() {
-  return (
-    <footer className="bg-ocean-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="font-display font-bold text-xl mb-4">Swim with Sairy</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-ocean-200 mb-6">
-            <a href="tel:3463263650" className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
-              <Phone className="w-4 h-4" />
-              <span>346-326-3650</span>
-            </a>
-            <a href="mailto:swimwithsairy.com" className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
-              <Mail className="w-4 h-4" />
-              <span>swimwithsairy@gmail.com</span>
-            </a>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span>Sugar Land, TX</span>
-            </span>
-          </div>
-          <p className="text-ocean-300 text-sm">
-            Professional mobile swim lessons serving Sugar Land and surrounding areas.
-          </p>
-          <div className="mt-6 pt-6 border-t border-ocean-800">
-            <p className="text-ocean-400 text-sm">
-              &copy; {new Date().getFullYear()} Swim with Sairy. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
   );
 }
 
 // ============ MAIN APP ============
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-ocean-900 antialiased font-sans">
       <Navbar />
       <HeroSection />
       <MobileAdvantage />
       <AboutSection />
       <ProgramsSection />
-      <ReviewsMarquee />
+      {ReviewsMarquee && <ReviewsMarquee />}
       <ContactSection />
-      <Footer />
     </div>
   );
 }
-
-export default App;
