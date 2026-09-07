@@ -169,21 +169,205 @@ function HeroSection() {
   );
 }
 
+import React, { useState } from 'react';
+import { Search, MapPin, CheckCircle2, XCircle, Mail, ArrowRight, Heart, Users, Clock } from 'lucide-react';
+
+// ============ MANUALLY EDIT YOUR APPROVED ZIP CODES HERE ============
+const APPROVED_ZIP_CODES = [
+  '77478', // Sugar Land
+  '77479', // Sugar Land
+  '77498', // Sugar Land
+  '77406', // Richmond
+  '77407', // Richmond
+  '77469', // Richmond / Rosenberg
+  '77471', // Rosenberg
+  '77477', // Stafford
+  '77494', // Southeast Katy
+  '77450', // Katy
+  '77096', // Houston / Bellaire area
+];
+
 // ============ MOBILE ADVANTAGE SECTION ============
 function MobileAdvantage() {
+  const [zipInput, setZipInput] = useState('');
+  const [searchStatus, setSearchStatus] = useState('idle'); // 'idle' | 'success' | 'out_of_range' | 'invalid'
+  const [clientEmail, setClientEmail] = useState('');
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+  const handleZipCheck = (e) => {
+    e.preventDefault();
+    const cleanZip = zipInput.trim();
+
+    if (!cleanZip || cleanZip.length !== 5 || isNaN(cleanZip)) {
+      setSearchStatus('invalid');
+      return;
+    }
+
+    if (APPROVED_ZIP_CODES.includes(cleanZip)) {
+      setSearchStatus('success');
+    } else {
+      setSearchStatus('out_of_range');
+    }
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    if (clientEmail.trim()) {
+      // Logic to save waitlist emails can be connected here
+      setEmailSubmitted(true);
+    }
+  };
+
+  const handleResetSearch = () => {
+    setSearchStatus('idle');
+    setZipInput('');
+    setEmailSubmitted(false);
+    setClientEmail('');
+  };
+
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* LEFT COLUMN: ZIP CODE SEARCH WIDGET (Replaces Image) */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-ocean-100 to-cyan-100 overflow-hidden shadow-2xl">
-              <img
-                src="https://i.postimg.cc/yNC9vtfb/Screenshot-2026-06-20-153057.jpg"
-                alt="Beautiful outdoor pool setting for private swim lessons"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/20 to-transparent" />
+            <div className="rounded-3xl bg-gradient-to-br from-ocean-50 to-cyan-50 p-8 md:p-10 border border-ocean-100 shadow-2xl">
+              
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-ocean-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-ocean-900">Check Service Area</h3>
+                  <p className="text-sm text-ocean-600">See if mobile teachings are available in your area</p>
+                </div>
+              </div>
+
+              {/* SEARCH FORM / RESULT DISPLAY */}
+              {searchStatus === 'idle' || searchStatus === 'invalid' ? (
+                <form onSubmit={handleZipCheck} className="space-y-4">
+                  <div>
+                    <label htmlFor="zipSearch" className="block text-sm font-semibold text-ocean-900 mb-2">
+                      Enter your 5-digit Zip Code
+                    </label>
+                    <div className="relative">
+                      <input
+                        id="zipSearch"
+                        type="text"
+                        maxLength={5}
+                        value={zipInput}
+                        onChange={(e) => {
+                          setZipInput(e.target.value);
+                          if (searchStatus === 'invalid') setSearchStatus('idle');
+                        }}
+                        placeholder="e.g. 77478"
+                        className="w-full px-5 py-4 pl-12 rounded-2xl border-2 border-ocean-200 bg-white text-ocean-900 text-lg font-medium focus:outline-none focus:border-cyan-500 transition-colors shadow-sm"
+                      />
+                      <Search className="w-6 h-6 text-ocean-400 absolute left-4 top-1/2 -translate-y-1/2" />
+                    </div>
+                    {searchStatus === 'invalid' && (
+                      <p className="text-red-500 text-sm mt-2 font-medium">Please enter a valid 5-digit numerical zip code.</p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-ocean-600 hover:from-cyan-600 hover:to-ocean-700 text-white font-bold rounded-2xl shadow-lg shadow-cyan-500/25 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2"
+                  >
+                    Check Availability
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </form>
+              ) : searchStatus === 'success' ? (
+                /* SUCCESS STATE */
+                <div className="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm text-center space-y-4">
+                  <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-ocean-900">Great News!</h4>
+                    <p className="text-ocean-700 mt-1">
+                      We offer private mobile teachings in <span className="font-bold text-emerald-600">{zipInput}</span>.
+                    </p>
+                  </div>
+                  <div className="pt-2 flex flex-col gap-2">
+                    <a
+                      href="#booking"
+                      className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-colors shadow-md block"
+                    >
+                      Schedule Your Lessons Now
+                    </a>
+                    <button
+                      onClick={handleResetSearch}
+                      className="text-sm text-ocean-500 hover:text-ocean-700 underline font-medium pt-1"
+                    >
+                      Check another zip code
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                /* OUT OF SERVICE AREA STATE */
+                <div className="bg-white p-6 rounded-2xl border border-amber-100 shadow-sm text-center space-y-4">
+                  <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto">
+                    <XCircle className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-ocean-900">Not in your area yet</h4>
+                    <p className="text-ocean-700 text-sm mt-1">
+                      Zip code <span className="font-semibold">{zipInput}</span> isn't in our primary travel range, but we are expanding rapidly!
+                    </p>
+                  </div>
+
+                  {!emailSubmitted ? (
+                    <form onSubmit={handleEmailSubmit} className="pt-2 space-y-3">
+                      <p className="text-xs font-semibold text-ocean-600 uppercase tracking-wider">
+                        Get notified when we expand to your zip:
+                      </p>
+                      <div className="flex gap-2">
+                        <input
+                          type="email"
+                          required
+                          value={clientEmail}
+                          onChange={(e) => setClientEmail(e.target.value)}
+                          placeholder="Your email address"
+                          className="flex-1 px-4 py-2.5 rounded-xl border border-ocean-200 text-sm text-ocean-900 focus:outline-none focus:border-cyan-500"
+                        />
+                        <button
+                          type="submit"
+                          className="px-4 py-2.5 bg-ocean-900 hover:bg-ocean-800 text-white font-semibold rounded-xl text-sm transition-colors flex items-center gap-1"
+                        >
+                          <Mail className="w-4 h-4" />
+                          Notify Me
+                        </button>
+                      </div>
+                    </form>
+                  ) : (
+                    <div className="p-3 bg-ocean-50 rounded-xl text-ocean-800 text-sm font-medium">
+                      ✓ Thanks! We'll reach out when we expand to {zipInput}.
+                    </div>
+                  )}
+
+                  <button
+                    onClick={handleResetSearch}
+                    className="text-sm text-ocean-500 hover:text-ocean-700 underline font-medium pt-1 block mx-auto"
+                  >
+                    Check another zip code
+                  </button>
+                </div>
+              )}
+
+              {/* LOCATION BADGE FOOTER */}
+              <div className="mt-8 pt-6 border-t border-ocean-100 flex items-center justify-between text-xs text-ocean-600">
+                <span className="flex items-center gap-1.5 font-medium">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  Active Hub: Sugar Land & Surrounding Areas
+                </span>
+                <span className="text-ocean-400 font-mono">Mobile Lessons</span>
+              </div>
             </div>
+
+            {/* FLOATING LOCATION DECORATION */}
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-cyan-500 to-ocean-500 rounded-2xl p-4 md:p-6 shadow-xl text-white hidden sm:block">
               <MapPin className="w-8 h-8 mb-2" />
               <p className="font-bold">Sugar Land, TX</p>
@@ -191,6 +375,7 @@ function MobileAdvantage() {
             </div>
           </div>
 
+          {/* RIGHT COLUMN: TEXT DETAILS */}
           <div>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-900 mb-6">
               Learn Where You're
@@ -215,11 +400,14 @@ function MobileAdvantage() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 }
+
+export default MobileAdvantage;
 
 // ============ ABOUT SECTION ============
 function AboutSection() {
