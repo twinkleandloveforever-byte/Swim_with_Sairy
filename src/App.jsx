@@ -169,9 +169,6 @@ function HeroSection() {
   );
 }
 
-import React, { useState } from 'react';
-import { Search, MapPin, CheckCircle2, XCircle, Mail, ArrowRight, Heart, Users, Clock } from 'lucide-react';
-
 // ============ MANUALLY EDIT YOUR APPROVED ZIP CODES HERE ============
 const APPROVED_ZIP_CODES = [
   '77478', // Sugar Land
@@ -213,7 +210,6 @@ function MobileAdvantage() {
   const handleEmailSubmit = (e) => {
     e.preventDefault();
     if (clientEmail.trim()) {
-      // Logic to save waitlist emails can be connected here
       setEmailSubmitted(true);
     }
   };
@@ -230,7 +226,7 @@ function MobileAdvantage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT COLUMN: ZIP CODE SEARCH WIDGET (Replaces Image) */}
+          {/* LEFT COLUMN: ZIP CODE SEARCH WIDGET */}
           <div className="relative">
             <div className="rounded-3xl bg-gradient-to-br from-ocean-50 to-cyan-50 p-8 md:p-10 border border-ocean-100 shadow-2xl">
               
@@ -406,9 +402,6 @@ function MobileAdvantage() {
     </section>
   );
 }
-
-export default MobileAdvantage;
-
 // ============ ABOUT SECTION ============
 function AboutSection() {
   return (
